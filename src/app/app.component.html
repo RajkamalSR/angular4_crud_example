@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h1>{{heading}}</h1>
+    </div>
+    <div class="col-md-12">
+      <input (keyup.enter)="createPost(title)" #title type="text" class="form-control">
+      <ul class="list-group">
+        <li *ngFor="let post of posts" class="list-group-item">
+          <button (click)="updatePost(post)" class="btn btn-default btn-sm">Update</button>
+          <button (click)="deletePost(post)" class="btn btn-default btn-sm">Delete</button>
+          <a href="#" class="link">{{post.title}}</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
